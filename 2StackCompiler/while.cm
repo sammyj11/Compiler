@@ -1,0 +1,20 @@
+ (* pi.cm Build project *)
+ Library
+structure While
+structure AST
+is
+ while_ast.sml (* Lot of datatypes *)
+ symboltable.sml
+ memory.sml
+ stack.sml
+
+ assign3.lex (* Lexer rules. *)
+ assign3.yacc:MLYacc (* Parser rules. *)
+ glue.sml (* Build the parser *)
+ compiler.sml (* Lex, parse, panic... *)
+  
+ 
+ $/basis.cm (* SML/NJ’s Basis Library. *)
+ $/ml-yacc-lib.cm (* Code written by Lucent. *)
+ $smlnj/compiler/compiler.cm (* Structure Compiler. *)
+
